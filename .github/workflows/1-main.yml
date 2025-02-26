@@ -1,0 +1,9 @@
+name: Main branch
+on:
+  push:
+    branches:
+      - main
+jobs:
+  python-ci:
+    uses: ./.github/workflows/python-ci.yml
+    secrets: inherit
