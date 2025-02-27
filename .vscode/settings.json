@@ -1,0 +1,6 @@
+{
+  "sonarlint.connectedMode.project": {
+    "connectionId": "guimatech",
+    "projectKey": "guimatech_python-image"
+  }
+}
