@@ -1,9 +1,12 @@
 name: Main branch
 on:
-  push:
+  pull_request:
+    types:
+      - closed
     branches:
       - main
 jobs:
-  python-ci:
-    uses: ./.github/workflows/python-ci.yml
+  publish-image:
+    if: github.event.pull_request.merged == true
+    uses: ./.github/workflows/publish.yml
     secrets: inherit
